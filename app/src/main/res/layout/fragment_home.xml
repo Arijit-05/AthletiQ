@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--Header-->
+        <RelativeLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="25dp"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:id="@+id/hello_name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="Hello Arijit 💪🏻"
+                android:textColor="#A3F8CF"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hello_name_txt"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="This is AthletiQ"
+                android:textColor="@color/white"
+                android:textSize="25sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/user_icon_card"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentEnd="true"
+                android:elevation="30dp"
+                app:cardCornerRadius="30dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#002a27"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/user_logo" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <!--Search Bar-->
+        <com.google.android.material.search.SearchBar
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_marginHorizontal="25dp"
+            android:backgroundTint="#002a27"
+            android:text="Search"
+            android:textAppearance="@font/montserrat_regular" />
+
+        <!--Health Grade Card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/health_grade_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/search_bar"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="5dp"
+            android:elevation="30dp"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/gradient"
+                android:padding="20dp">
+
+                <RelativeLayout
+                    android:id="@+id/progress_circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp">
+
+                    <ProgressBar
+                        android:id="@+id/progress_loader"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/circle_shape"
+                        android:indeterminate="false"
+                        android:progress="70"
+                        android:progressDrawable="@drawable/circular_progress_bar" />
+
+                    <TextView
+                        android:id="@+id/progress_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:text="70"
+                        android:textColor="#0C3A00"
+                        android:textSize="25sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/health_grade_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@id/progress_circle"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Health Grade"
+                    android:textColor="#0C3A00"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/health_grade_txt"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_toEndOf="@id/progress_circle"
+                    android:fontFamily="@font/montserrat_regular"
+                    android:text="Perfect progress! Keep going to up your fitness game"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Categories Section-->
+        <HorizontalScrollView
+            android:id="@+id/workout_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/health_grade_card"
+            android:layout_marginTop="5dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="25dp"
+                android:orientation="horizontal"
+                android:paddingVertical="10dp">
+
+                <!--Full Body Card-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/full_body_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#002a27"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Full Body"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Upper Body Card-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/upper_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#002a27"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Upper"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Lower Body Card-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/lower_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#002a27"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Lower"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Core-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/core_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#002a27"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Core"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Cardio-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardio_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#002a27"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Cardio"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Cardio-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/stretching_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:elevation="30dp"
+                    app:cardCornerRadius="10dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#002a27"
+                        android:padding="15dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="Stretching"
+                            android:textColor="@color/white"
+                            android:textSize="13sp" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Blank Space-->
+                <RelativeLayout
+                    android:layout_width="50dp"
+                    android:layout_height="10dp" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!--Workout Section-->
+        <RelativeLayout
+            android:id="@+id/recommended_workout_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/workout_categories"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/workout_section_heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Recommended Workout"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/see_all_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="25dp"
+                android:fontFamily="@font/montserrat_regular"
+                android:text="See all"
+                android:textColor="#69A8FF"
+                android:textSize="13sp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/workout_section_heading"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="25dp"
+                    android:orientation="horizontal">
+
+                    <!--Chest Workout card-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/chest_workout_card"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:elevation="30dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/chest_workout" />
+
+                            <TextView
+                                android:id="@+id/chest_workout_txt"
+                                android:layout_width="100dp"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/chest_task_txt"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="IRON CHEST"
+                                android:textColor="@color/white"
+                                android:textSize="26sp" />
+
+                            <TextView
+                                android:id="@+id/chest_task_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="34 tasks"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/deep_green_bg"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:gravity="center"
+                                android:text="⭐ 4.5"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                        <!--Chest Workout card-->
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Back Workout card-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/back_workout_card"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="10dp"
+                        android:elevation="30dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/back_workout" />
+
+                            <TextView
+                                android:id="@+id/back_workout_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/back_task_txt"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="WINGS OF STEEL"
+                                android:textColor="@color/white"
+                                android:textSize="26sp" />
+
+                            <TextView
+                                android:id="@+id/back_task_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="23 tasks"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/deep_green_bg"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:gravity="center"
+                                android:text="⭐ 4.7"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Core Workout card-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/core_workout_card"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="10dp"
+                        android:elevation="30dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/abs" />
+
+                            <TextView
+                                android:id="@+id/core_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/core_task_txt"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="ULTIMATE ABS"
+                                android:textColor="@color/white"
+                                android:textSize="26sp" />
+
+                            <TextView
+                                android:id="@+id/core_task_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="22 tasks"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/deep_green_bg"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:gravity="center"
+                                android:text="⭐ 4.2"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Cardio Workout card-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardio_workout_card"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="10dp"
+                        android:elevation="30dp"
+                        app:cardCornerRadius="10dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/running" />
+
+                            <TextView
+                                android:id="@+id/cardio_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_above="@id/cardio_task_txt"
+                                android:layout_marginStart="10dp"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:text="FULL THROTTLE"
+                                android:textColor="@color/white"
+                                android:textSize="26sp" />
+
+                            <TextView
+                                android:id="@+id/cardio_task_txt"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:fontFamily="@font/montserrat_regular"
+                                android:text="12 tasks"
+                                android:textColor="@color/white"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="30dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_margin="10dp"
+                                android:background="@drawable/deep_green_bg"
+                                android:fontFamily="@font/montserrat_bold"
+                                android:gravity="center"
+                                android:text="⭐ 4.9"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--Blank Space-->
+                    <RelativeLayout
+                        android:layout_width="50dp"
+                        android:layout_height="10dp" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+
+        </RelativeLayout>
+
+        <!--Popular Plans-->
+        <RelativeLayout
+            android:id="@+id/popular_plans_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recommended_workout_section"
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="25dp">
+
+            <TextView
+                android:id="@+id/popular_plans_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="Popular Plans"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <!--Belly fat card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/belly_fat_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/popular_plans_txt"
+                android:layout_marginTop="10dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#063732"
+                    android:padding="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/belly_img"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/lose_belly_fat" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/heading1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_toEndOf="@id/belly_img"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:includeFontPadding="false"
+                        android:text="Lose Belly Fat"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/time1"
+                        android:layout_below="@id/heading1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_toEndOf="@id/belly_img"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:includeFontPadding="false"
+                        android:text="35 mins"
+                        android:layout_marginTop="2dp"
+                        android:textColor="#99e8c2"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/time1"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/belly_img"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Focused on targetting abdominal fat, includes core workouts and cardio."
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Boost your endurance card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/endurance_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/belly_fat_card"
+                android:layout_marginTop="10dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#063732"
+                    android:padding="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/endurance_img"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="120dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/cycling" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/heading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_toEndOf="@id/endurance_img"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:includeFontPadding="false"
+                        android:text="Boost Your Endurance"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/time2"
+                        android:layout_below="@id/heading2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_toEndOf="@id/endurance_img"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:includeFontPadding="false"
+                        android:text="42 mins"
+                        android:layout_marginTop="2dp"
+                        android:textColor="#99e8c2"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/time2"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/endurance_img"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Improves stamina through long-duration, moderate-intensity exercises."
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--Build Muscle mass card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/build_muscle_mass_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/endurance_card"
+                android:layout_marginTop="10dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#063732"
+                    android:padding="20dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/muscle_mass_img"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/muscle_mass" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/heading3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_toEndOf="@id/muscle_mass_img"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:includeFontPadding="false"
+                        android:text="Build Muscle Mass"
+                        android:textColor="@color/white"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/time3"
+                        android:layout_below="@id/heading3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_toEndOf="@id/muscle_mass_img"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:includeFontPadding="false"
+                        android:text="54 mins"
+                        android:layout_marginTop="2dp"
+                        android:textColor="#99e8c2"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/time3"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_toEndOf="@id/muscle_mass_img"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:text="Combines strength training and hypertrophy-focused workouts for muscle growth."
+                        android:textColor="@color/white"
+                        android:textSize="13sp" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!--AI workout plan card-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ai_workout_plan_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/build_muscle_mass_card"
+                android:layout_marginTop="15dp"
+                android:elevation="30dp"
+                app:cardCornerRadius="20dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/dark_grey_gradient"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="15dp"
+                    android:paddingHorizontal="20dp">
+
+                    <TextView
+                        android:id="@+id/hdng1"
+                        android:layout_width="170dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrat_bold"
+                        android:textColor="@color/white"
+                        android:text="Get your personalised workout plan with our curated AI"
+                        android:textSize="20sp" />
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="200dp"
+                        android:layout_height="120dp"
+                        android:layout_toEndOf="@id/hdng1"
+                        android:layout_marginStart="10dp"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/lottie_bot" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:layout_below="@id/hdng1"
+                        android:backgroundTint="@color/white"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat_regular"
+                        android:letterSpacing="0.1"
+                        android:paddingVertical="10dp"
+                        android:textSize="15sp"
+                        android:text="GENERATE NOW" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </RelativeLayout>
+
+        <!--Blank Space-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_below="@id/popular_plans_section" />
+
+    </RelativeLayout>
+
+</ScrollView>

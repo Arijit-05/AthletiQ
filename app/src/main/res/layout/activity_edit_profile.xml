@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/bg_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditProfileActivity">
+
+    <!--Header-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:paddingHorizontal="25dp">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/back_arrow"
+            android:fontFamily="@font/montserrat_regular"
+            android:includeFontPadding="false"
+            android:text="Your Profile"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <!--Profile Edit Card-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/profile_edit_card"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="65dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#154242"
+            android:paddingTop="5dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/user_boy" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EDIT"
+                android:layout_alignParentBottom="true"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:fontFamily="@font/montserrat_bold"
+                android:background="#BC024B06"
+                android:textSize="15sp"
+                android:paddingVertical="5dp"
+                android:letterSpacing="0.1" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--Text Fields-->
+    <LinearLayout
+        android:id="@+id/text_fields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_below="@id/profile_edit_card">
+
+        <!--Name-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:letterSpacing="0.1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name_txt"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_regular"
+                android:letterSpacing="0.1"
+                android:text="ARIJIT ROY"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="#D3D0D0"
+                android:hint="NAME" />
+
+        </RelativeLayout>
+
+        <!--Email-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/email_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EMAIL"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:letterSpacing="0.1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_txt"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:fontFamily="@font/montserrat_regular"
+                android:letterSpacing="0.1"
+                android:text="royarijitaugust2005@gmail.com"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="#D3D0D0"
+                android:hint="EMAIL" />
+
+        </RelativeLayout>
+
+        <!--Gender-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/gender_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GENDER"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_bold"
+                android:letterSpacing="0.1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/gender_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/gender_txt"
+                android:textColor="@color/white"
+                android:fontFamily="@font/montserrat_regular"
+                android:letterSpacing="0.1"
+                android:text="MALE"
+                android:textSize="14sp"
+                android:textColorHighlight="@color/white"
+                android:textColorHint="#D3D0D0"
+                android:hint="GENDER" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_fields"
+        android:layout_marginHorizontal="30dp"
+        android:backgroundTint="@color/black"
+        android:layout_marginTop="10dp"
+        android:paddingVertical="15dp"
+        android:text="UPDATE"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat_bold"
+        android:letterSpacing="0.1"
+        android:textSize="14sp" />
+
+</RelativeLayout>

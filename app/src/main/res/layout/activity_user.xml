@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_2"
+    tools:context=".UserActivity">
+
+    <!--Header-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:paddingHorizontal="25dp">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/back_arrow"
+            android:fontFamily="@font/montserrat_regular"
+            android:includeFontPadding="false"
+            android:text="Your Profile"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+    </RelativeLayout>
+
+    <!--User profile image-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/user_profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:cardCornerRadius="75dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#154242">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:src="@drawable/user_boy" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!--User name-->
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/montserrat_bold"
+        android:letterSpacing="0.1"
+        android:text="ARIJIT"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <!--User email-->
+    <TextView
+        android:id="@+id/user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/montserrat_regular"
+        android:letterSpacing="0.1"
+        android:text="royarijitaugust2005@gmail.com"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <!--Edit Button-->
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/user_email"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#AEFF8B"
+        android:fontFamily="@font/montserrat_bold"
+        android:paddingHorizontal="40dp"
+        android:text="EDIT PROFILE"
+        android:textColor="#0d3c00"
+        android:textSize="13sp" />
+
+
+    <!--Options Layout-->
+    <LinearLayout
+        android:id="@+id/options_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_button"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="13dp"
+        android:orientation="horizontal">
+
+        <!--Settings card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/settings_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:elevation="30dp"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#CCFFB5"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/settings_logo"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/setting" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/settings_logo"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="SETTINGS"
+                    android:textColor="#0d3c00" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!--Email card-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/email_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:elevation="30dp"
+            app:cardCornerRadius="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#CCFFB5"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="20dp">
+
+                <ImageView
+                    android:id="@+id/email_logo"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/email" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@id/email_logo"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="CONTACT"
+                    android:textColor="#0d3c00" />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</RelativeLayout>
