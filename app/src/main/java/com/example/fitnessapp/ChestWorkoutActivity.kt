@@ -8,11 +8,16 @@ import android.os.Vibrator
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.cardview.widget.CardView
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class ChestWorkoutActivity : AppCompatActivity() {
     private lateinit var backButton: ImageView
+    private lateinit var dumbbellBenchPressCard: CardView
+    private lateinit var inclineBenchPressCard: CardView
+    private lateinit var cableIronCrossCard: CardView
+    private lateinit var chestDipCard: CardView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +30,10 @@ class ChestWorkoutActivity : AppCompatActivity() {
         }
 
         backButton = findViewById(R.id.back_btn)
+        dumbbellBenchPressCard = findViewById(R.id.dumbbell_bench_press_card)
+        inclineBenchPressCard = findViewById(R.id.incline_bench_press_card)
+        cableIronCrossCard = findViewById(R.id.cable_iron_cross_card)
+        chestDipCard = findViewById(R.id.chest_dip_card)
 
         backButton.setOnClickListener {
             vibrate()

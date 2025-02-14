@@ -60,6 +60,7 @@
 
                 <!--Dumbbell bench press-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/dumbbell_bench_press_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:elevation="20dp"
@@ -104,6 +105,7 @@
 
                 <!--Incline bench press-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/incline_bench_press_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -149,6 +151,7 @@
 
                 <!--Cable_iron_cross-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/cable_iron_cross_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -194,6 +197,7 @@
 
                 <!--Machine fly-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/machine_fly_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
@@ -239,6 +243,7 @@
 
                 <!--Chest dip-->
                 <androidx.cardview.widget.CardView
+                    android:id="@+id/chest_dip_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
