@@ -13,12 +13,14 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat.getSystemService
+import com.google.android.material.search.SearchBar
 
 class HomeFragment : Fragment() {
     private lateinit var userIconCard: CardView
     private lateinit var chestCard: CardView
     private lateinit var backCard: CardView
     private lateinit var aiBtn: Button
+    private lateinit var searchBar: SearchBar
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,6 +32,7 @@ class HomeFragment : Fragment() {
         chestCard = view.findViewById(R.id.chest_workout_card)
         backCard = view.findViewById(R.id.back_workout_card)
         aiBtn = view.findViewById(R.id.ai_btn)
+        searchBar = view.findViewById(R.id.search_bar)
 
         userIconCard.setOnClickListener {
             startActivity(Intent(context, UserActivity::class.java))
@@ -48,6 +51,13 @@ class HomeFragment : Fragment() {
 
         aiBtn.setOnClickListener {
             startActivity(Intent(context, ChatBotActivity::class.java))
+            vibrate()
+        }
+
+        searchBar.setOnClickListener {
+            val intent = Intent(context, SearchResultActivity::class.java)
+            intent.putExtra("query", searchBar.text.toString())
+            startActivity(intent)
             vibrate()
         }
 
