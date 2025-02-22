@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/bg_2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BackWorkoutActivity">
+
+    <!--Header-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp">
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_toEndOf="@id/back_btn"
+            android:fontFamily="@font/montserrat_regular"
+            android:letterSpacing="0.1"
+            android:text="WINGS OF STEEL"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Exercises-->
+            <LinearLayout
+                android:id="@+id/exercises"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:paddingHorizontal="20dp">
+
+                <!--Dumbbell bench press-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bent_over_row_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:elevation="20dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_gradient"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bent_over_row" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:letterSpacing="0.1"
+                            android:text="BENT OVER ROW"
+                            android:textColor="#00712D"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="x4 sets (15 - 20 reps)"
+                            android:textColor="#00712D"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Incline bench press-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/machine_t_bar_row_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:elevation="20dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_gradient"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/machine_t_bar_row" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:letterSpacing="0.1"
+                            android:text="MACHINE T-BAR ROW"
+                            android:textColor="#00712D"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="x4 sets (15 - 20 reps)"
+                            android:textColor="#00712D"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Cable_iron_cross-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/pendlay_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:elevation="20dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_gradient"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pendlay_row" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:letterSpacing="0.1"
+                            android:text="PENDLAY ROW"
+                            android:textColor="#00712D"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="x4 sets (15 - 20 reps)"
+                            android:textColor="#00712D"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Machine fly-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/bent_over_dumbbell_row_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:elevation="20dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_gradient"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bent_over_dumbbell_row" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:letterSpacing="0.1"
+                            android:text="BENT OVER DUMBBELL ROW"
+                            android:textColor="#00712D"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="x4 sets (15 - 20 reps)"
+                            android:textColor="#00712D"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--Chest dip-->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/tripod_dumbbell_row_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:elevation="20dp"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/green_gradient"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/tripod_dumbbell_row" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/montserrat_bold"
+                            android:letterSpacing="0.1"
+                            android:text="TRIPOD DUMBBELL ROW"
+                            android:textColor="#00712D"
+                            android:textSize="17sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:fontFamily="@font/montserrat_regular"
+                            android:text="x4 sets (15 - 20 reps)"
+                            android:textColor="#00712D"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -10,12 +10,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat.getSystemService
 
 class HomeFragment : Fragment() {
     private lateinit var userIconCard: CardView
     private lateinit var chestCard: CardView
+    private lateinit var backCard: CardView
+    private lateinit var aiBtn: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,6 +28,8 @@ class HomeFragment : Fragment() {
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         userIconCard = view.findViewById(R.id.user_icon_card)
         chestCard = view.findViewById(R.id.chest_workout_card)
+        backCard = view.findViewById(R.id.back_workout_card)
+        aiBtn = view.findViewById(R.id.ai_btn)
 
         userIconCard.setOnClickListener {
             startActivity(Intent(context, UserActivity::class.java))
@@ -33,6 +38,16 @@ class HomeFragment : Fragment() {
 
         chestCard.setOnClickListener {
             startActivity(Intent(context, ChestWorkoutActivity::class.java))
+            vibrate()
+        }
+
+        backCard.setOnClickListener {
+            startActivity(Intent(context, BackWorkoutActivity::class.java))
+            vibrate()
+        }
+
+        aiBtn.setOnClickListener {
+            startActivity(Intent(context, ChatBotActivity::class.java))
             vibrate()
         }
 

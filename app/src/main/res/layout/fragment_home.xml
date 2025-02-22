@@ -652,9 +652,9 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/belly_img"
-                        android:layout_centerVertical="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         app:cardCornerRadius="20dp">
 
                         <ImageView
@@ -679,15 +679,15 @@
 
                     <TextView
                         android:id="@+id/time1"
-                        android:layout_below="@id/heading1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/heading1"
                         android:layout_marginStart="13dp"
+                        android:layout_marginTop="2dp"
                         android:layout_toEndOf="@id/belly_img"
                         android:fontFamily="@font/montserrat_regular"
                         android:includeFontPadding="false"
                         android:text="35 mins"
-                        android:layout_marginTop="2dp"
                         android:textColor="#99e8c2"
                         android:textSize="12sp" />
 
@@ -725,9 +725,9 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/endurance_img"
-                        android:layout_centerVertical="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         app:cardCornerRadius="20dp">
 
                         <ImageView
@@ -752,15 +752,15 @@
 
                     <TextView
                         android:id="@+id/time2"
-                        android:layout_below="@id/heading2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/heading2"
                         android:layout_marginStart="13dp"
+                        android:layout_marginTop="2dp"
                         android:layout_toEndOf="@id/endurance_img"
                         android:fontFamily="@font/montserrat_regular"
                         android:includeFontPadding="false"
                         android:text="42 mins"
-                        android:layout_marginTop="2dp"
                         android:textColor="#99e8c2"
                         android:textSize="12sp" />
 
@@ -798,9 +798,9 @@
 
                     <androidx.cardview.widget.CardView
                         android:id="@+id/muscle_mass_img"
-                        android:layout_centerVertical="true"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
                         app:cardCornerRadius="20dp">
 
                         <ImageView
@@ -825,15 +825,15 @@
 
                     <TextView
                         android:id="@+id/time3"
-                        android:layout_below="@id/heading3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/heading3"
                         android:layout_marginStart="13dp"
+                        android:layout_marginTop="2dp"
                         android:layout_toEndOf="@id/muscle_mass_img"
                         android:fontFamily="@font/montserrat_regular"
                         android:includeFontPadding="false"
                         android:text="54 mins"
-                        android:layout_marginTop="2dp"
                         android:textColor="#99e8c2"
                         android:textSize="12sp" />
 
@@ -867,40 +867,41 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/dark_grey_gradient"
-                    android:paddingBottom="10dp"
+                    android:paddingHorizontal="20dp"
                     android:paddingTop="15dp"
-                    android:paddingHorizontal="20dp">
+                    android:paddingBottom="10dp">
 
                     <TextView
                         android:id="@+id/hdng1"
                         android:layout_width="170dp"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrat_bold"
-                        android:textColor="@color/white"
                         android:text="Get your personalised workout plan with our curated AI"
+                        android:textColor="@color/white"
                         android:textSize="20sp" />
 
                     <com.airbnb.lottie.LottieAnimationView
                         android:layout_width="200dp"
                         android:layout_height="120dp"
-                        android:layout_toEndOf="@id/hdng1"
                         android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/hdng1"
                         app:lottie_autoPlay="true"
                         app:lottie_loop="true"
                         app:lottie_rawRes="@raw/lottie_bot" />
 
                     <Button
+                        android:id="@+id/ai_btn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
                         android:layout_below="@id/hdng1"
+                        android:layout_marginTop="3dp"
                         android:backgroundTint="@color/white"
-                        android:textColor="@color/black"
                         android:fontFamily="@font/montserrat_regular"
                         android:letterSpacing="0.1"
                         android:paddingVertical="10dp"
-                        android:textSize="15sp"
-                        android:text="GENERATE NOW" />
+                        android:text="GENERATE NOW"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
                 </RelativeLayout>
 
